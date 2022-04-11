@@ -23,7 +23,7 @@ export function Header() {
       <AppBar position="static">
         <Toolbar sx={{ gap: { md: 2, xs: 0.5 } }}>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Celo Dapp Starter
+            Piron Dapp Starter
           </Typography>
           {network && <Chip label={network.name} color="secondary" />}
           {address && (

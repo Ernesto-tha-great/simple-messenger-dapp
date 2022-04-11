@@ -2,7 +2,7 @@ import * as React from "react";
 import { Tabs, Tab, Typography, Box } from "@mui/material";
 import deployedContracts from "@celo-progressive-dapp-starter/hardhat/deployments/hardhat_contracts.json";
 import { useContractKit } from "@celo-tools/use-contractkit";
-import { StorageContract, GreeterContract, AccountInfo } from "@/components";
+import { StorageContract, GreeterContract, AccountInfo, MessengerContract } from "@/components";
 import AppLayout from "@/components/layout/AppLayout";
 
 interface TabPanelProps {
@@ -31,7 +31,7 @@ export default function App() {
           <Tabs variant="scrollable" scrollButtons allowScrollButtonsMobile value={value} onChange={handleChange} aria-label="basic tabs">
             <Tab label="Account" {...a11yProps(0)} />
             <Tab label="Storage" {...a11yProps(1)} />
-            <Tab label="Greeter" {...a11yProps(2)} />
+            <Tab label="Messenger" {...a11yProps(2)} />
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
@@ -41,7 +41,7 @@ export default function App() {
           <StorageContract contractData={contracts?.Storage} />
         </TabPanel>
         <TabPanel value={value} index={2}>
-          <GreeterContract contractData={contracts?.Greeter} />
+          <MessengerContract contractData={contracts?.Messenger} />
         </TabPanel>
       </Box>
     </AppLayout>
