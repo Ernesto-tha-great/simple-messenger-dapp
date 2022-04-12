@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
             horizontal: "right",
           }}
         >
-          <ApolloProvider client={client}>
+          <ApolloProvider client={client}> 
             <div suppressHydrationWarning>
               {typeof window === "undefined" ? null : (
                 <Component {...pageProps} />
