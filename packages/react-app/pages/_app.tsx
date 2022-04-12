@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
             <div suppressHydrationWarning>
               {typeof window === "undefined" ? null : (
                 <Component {...pageProps} />
-              )}
+              )} 
             </div>
           </ApolloProvider>
         </SnackbarProvider>
