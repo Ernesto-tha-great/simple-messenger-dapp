@@ -20,7 +20,7 @@ export function MessengerContract({ contractData }) {
         contractData.abi,
         contractData.address
       ) as any as Messenger)
-    : null;
+    : null; 
 
   useEffect(() => {
     if (contractData) {
